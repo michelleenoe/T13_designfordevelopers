@@ -1,16 +1,50 @@
 :root {
-    background: #E3EDFB;
+  background: #e3edfb;
 
-    --color-icon: #0B3A67;
+  --color-icon: #0b3a67;
 
-    --image-width: 8rem;
-    --card-padding: 1rem;
+  --image-width: 8rem;
+  --card-padding: 1rem;
 
-    --font-heading: 1.75rem;
+  --font-heading: 1.75rem;
 
-    /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
-    --hide-overlay: 0;
+  /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
+
+  --hide-overlay: 0;
+}
+body {
+  background-color: var(--background);
+}
+h1 {
+  font-size: var(--font-heading);
+  font-weight: bolder;
 }
 
+.profilepicture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.container {
+  display: flex;
+  align-items: center;
+  padding: var(--card-padding);
+}
+.info {
+  margin-left: var(--card-padding);
+  display: flex;
+  flex-direction: column;
+}
+
+svg {
+  color: var(--color-icon);
+  width: 25px;
+  height: 25px;
+}
+.links {
+  display: flex;
+  gap: 30px;
+  margin-top: var(--card-padding);
+}
 
 /* Begynd her... */
