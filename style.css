@@ -3,3 +3,5 @@ article {
     margin-inline: auto;
 }
 
+img {
+overflow:clip;}
