@@ -3,5 +3,23 @@ article {
     margin-inline: auto;
 }
 
-img {
-overflow:clip;}
+.grid-container {
+    display: grid;
+    grid-template-columns: [full-start] minmax(1em, 1fr) [center-start] repeat(12, [col-start] 1fr [col-end]) [center-end] minmax(1em, 1fr) [full-end];
+    grid-gap: 20px;
+  }
+  
+  article {
+    grid-column: center-start / center-end;
+  }
+  
+  blockquote {
+    grid-column: full-start / col-end 6;
+  }
+  
+  img {
+    grid-column: full-start / full-end;
+    width: 100%;
+    height: auto;
+  }
+  
