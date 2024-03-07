@@ -18,13 +18,17 @@ import { cardContent } from "../data/card-content.js";
     <main>
       <section>
         <header>
-          <h2>Financial Projections</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
+          <article class="card">
+            <div class="header-container">
+              <h2>Financial Projections</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </article>
         </header>
 
         <ScrollingContainer cardContent={cardContent} />
@@ -34,9 +38,25 @@ import { cardContent } from "../data/card-content.js";
 </html>
 
 <style>
-  main {
-    padding-block: 4rem; /* Kun af æstetiske årsager */
+  :root {
+    --content-width: 100%;
   }
-  section {
+
+  main {
+    padding-block: 4rem; 
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+  }
+
+  .header-container {
+    display: grid; 
+    justify-content: center; 
+    text-align: left;
+  }
+  p {
+    max-width: 65ch;
   }
 </style>
